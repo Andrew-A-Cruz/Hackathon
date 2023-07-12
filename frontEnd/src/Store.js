@@ -1,8 +1,16 @@
-import { Outlet, Link } from "react-router-dom";
 const Store = () => {
+  const cartStyle = {
+    color: "Red",
+  };
   return (
     <>
-      <h1>Store</h1>
+      <h1>DRM Store</h1>
+      <div>
+        <input type="text" placeholder="Search.."></input>
+        <button style={cartStyle} type="button">
+          Cart
+        </button>
+      </div>
     </>
   );
 };
