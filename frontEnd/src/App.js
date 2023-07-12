@@ -2,16 +2,14 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Store from "./Store.js";
+import Cart from "./Cart.js";
 function App() {
   return (
     <>
-      <Store />
-      <Router>
-        <Routes>
-          <Route exact path="/"></Route>
-          <Route path="/cart"></Route>
-        </Routes>
-      </Router>
+      <Routes>
+        <Route exact path="/" Component={Store}></Route>
+        <Route path="/cart" Component={Cart}></Route>
+      </Routes>
     </>
   );
 }
