@@ -3,7 +3,8 @@
     {
       "Price": 7.29,
       "Size": 27.5,
-      "Flavor": "Fruity"
+      "Flavor": "Fruity",
+      "Candy ID": 1
     }
   ],
 
@@ -11,7 +12,8 @@
     {
       "Price": 3.99,
       "Size": 15.6,
-      "Flavor": "Fruity"
+      "Flavor": "Fruity",
+      "Candy ID": 2
     }
   ],
 
@@ -19,7 +21,8 @@
     {
       "Price": 1.29,
       "Size": 3.5,
-      "Flavor": "Sour"
+      "Flavor": "Sour",
+      "Candy ID": 3
     }
   ],
 
@@ -27,7 +30,8 @@
     {
       "Price": 1.29,
       "Size": 5.0,
-      "Flavor": "Fruity"
+      "Flavor": "Fruity",
+      "Candy ID": 3
     }
   ],
 
@@ -35,7 +39,8 @@
     {
       "Price": 1.29,
       "Size": 3.1,
-      "Flavor": "Fruity"
+      "Flavor": "Fruity",
+      "Candy ID": 4
     }
   ],
 
@@ -43,7 +48,8 @@
     {
       "Price": 6.39,
       "Size": 9.1,
-      "Flavor": "Chocolate"
+      "Flavor": "Chocolate",
+      "Candy ID": 5
     }
   ],
 
@@ -51,7 +57,8 @@
     {
       "Price": 4.79,
       "Size": 10.5,
-      "Flavor": "Chocolate"
+      "Flavor": "Chocolate",
+      "Candy ID": 6
     }
   ],
 
@@ -59,7 +66,8 @@
     {
       "Price": 4.59,
       "Size": 10.05,
-      "Flavor": "Chocolate"
+      "Flavor": "Chocolate",
+      "Candy ID": 7
     }
   ],
 
@@ -67,7 +75,8 @@
     {
       "Price": 4.99,
       "Size": 10.59,
-      "Flavor": "Chocolate"
+      "Flavor": "Chocolate",
+      "Candy ID": 8
     }
   ],
 
@@ -75,7 +84,8 @@
     {
       "Price": 4.79,
       "Size": 10.78,
-      "Flavor": "Chocolate"
+      "Flavor": "Chocolate",
+      "Candy ID": 9
     }
   ],
 
@@ -83,7 +93,8 @@
     {
       "Price": 3.79,
       "Size": 16.0,
-      "Flavor": "Fruity"
+      "Flavor": "Fruity",
+      "Candy ID": 10
     }
   ],
 
@@ -91,7 +102,8 @@
     {
       "Price": 7.69,
       "Size": 17.03,
-      "Flavor": "Mint"
+      "Flavor": "Mint",
+      "Candy ID": 11
     }
   ],
 
@@ -99,7 +111,8 @@
     {
       "Price": 24.99,
       "Size": 40.05,
-      "Flavor": "Sour"
+      "Flavor": "Sour",
+      "Candy ID": 12
     }
   ],
 
@@ -107,7 +120,8 @@
     {
       "Price": 1.29,
       "Size": 3.5,
-      "Flavor": "Mint"
+      "Flavor": "Mint",
+      "Candy ID": 13
     }
   ],
 
@@ -115,7 +129,8 @@
     {
       "Price": 2.79,
       "Size": 6.25,
-      "Flavor": "Mint"
+      "Flavor": "Mint",
+      "Candy ID": 14
     }
   ],
 
@@ -123,7 +138,8 @@
     {
       "Price": 7.99,
       "Size": 30.4,
-      "Flavor": "Sour"
+      "Flavor": "Sour",
+      "Candy ID": 15
     }
   ]
 }
