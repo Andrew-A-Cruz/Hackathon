@@ -1,0 +1,24 @@
+{
+  "name": "hackathon",
+  "version": "1.0.0",
+  "description": "Calvin Chadima, Victor Chen, and Andrew Cruz",
+  "main": "mongo-dao.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrew-A-Cruz/Hackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andrew-A-Cruz/Hackathon/issues"
+  },
+  "homepage": "https://github.com/Andrew-A-Cruz/Hackathon#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.7.0"
+  }
+}
