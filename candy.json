@@ -1,0 +1,145 @@
+{
+  "Skittles": [
+    {
+      "Price": 7.29,
+      "Size": 27.5,
+      "Flavor": "Fruity",
+      "Candy ID": 1
+    }
+  ],
+
+  "Starburst": [
+    {
+      "Price": 3.99,
+      "Size": 15.6,
+      "Flavor": "Fruity",
+      "Candy ID": 2
+    }
+  ],
+
+  "Sour Patch Kids": [
+    {
+      "Price": 1.29,
+      "Size": 3.5,
+      "Flavor": "Sour",
+      "Candy ID": 3
+    }
+  ],
+
+  "Mike and Ike": [
+    {
+      "Price": 1.29,
+      "Size": 5.0,
+      "Flavor": "Fruity",
+      "Candy ID": 3
+    }
+  ],
+
+  "Swedish Fish": [
+    {
+      "Price": 1.29,
+      "Size": 3.1,
+      "Flavor": "Fruity",
+      "Candy ID": 4
+    }
+  ],
+
+  "Hershey's Milk Chocolate Bar (6)": [
+    {
+      "Price": 6.39,
+      "Size": 9.1,
+      "Flavor": "Chocolate",
+      "Candy ID": 5
+    }
+  ],
+
+  "Reese's Milk Chocolate Peanut Butter Cups": [
+    {
+      "Price": 4.79,
+      "Size": 10.5,
+      "Flavor": "Chocolate",
+      "Candy ID": 6
+    }
+  ],
+
+  "Peanut M&M's": [
+    {
+      "Price": 4.59,
+      "Size": 10.05,
+      "Flavor": "Chocolate",
+      "Candy ID": 7
+    }
+  ],
+
+  "Snickers Fun Size": [
+    {
+      "Price": 4.99,
+      "Size": 10.59,
+      "Flavor": "Chocolate",
+      "Candy ID": 8
+    }
+  ],
+
+  "Kit Kat": [
+    {
+      "Price": 4.79,
+      "Size": 10.78,
+      "Flavor": "Chocolate",
+      "Candy ID": 9
+    }
+  ],
+
+  "Twizzlers": [
+    {
+      "Price": 3.79,
+      "Size": 16.0,
+      "Flavor": "Fruity",
+      "Candy ID": 10
+    }
+  ],
+
+  "York Peppermint Patty": [
+    {
+      "Price": 7.69,
+      "Size": 17.03,
+      "Flavor": "Mint",
+      "Candy ID": 11
+    }
+  ],
+
+  "Lemonhead": [
+    {
+      "Price": 24.99,
+      "Size": 40.05,
+      "Flavor": "Sour",
+      "Candy ID": 12
+    }
+  ],
+
+  "Junior Mints": [
+    {
+      "Price": 1.29,
+      "Size": 3.5,
+      "Flavor": "Mint",
+      "Candy ID": 13
+    }
+  ],
+
+  "LifeSavers Mint": [
+    {
+      "Price": 2.79,
+      "Size": 6.25,
+      "Flavor": "Mint",
+      "Candy ID": 14
+    }
+  ],
+
+  "Airheads Xtremes": [
+    {
+      "Price": 7.99,
+      "Size": 30.4,
+      "Flavor": "Sour",
+      "Candy ID": 15
+    }
+  ]
+}
