@@ -1,15 +1,11 @@
+import "./cart.png";
 const Store = () => {
-  const cartStyle = {
-    color: "Red",
-  };
   return (
     <>
-      <h1>DRM Store</h1>
-      <div>
+      <h1>DRM Candy Store</h1>
+      <div style={{ textAlign: "center" }}>
         <input type="text" placeholder="Search.."></input>
-        <button style={cartStyle} type="button">
-          Cart
-        </button>
+        <button type="button"></button>
       </div>
     </>
   );
