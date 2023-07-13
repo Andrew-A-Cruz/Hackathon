@@ -27,6 +27,6 @@ export function addOrder(order) {
   };
   let promise = fetch(url, myInit);
   return promise.then((response) => {
-    return response.text();
+    return response.json();
   });
 }

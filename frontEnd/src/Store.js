@@ -1,5 +1,7 @@
 import inventory from "./candy.json";
 import { useState, useEffect } from "react";
+import { getOrder, getOrders, addOrder } from "./rest";
+import { redirect } from "react-router-dom";
 
 // for (let i = 0; i < inventory.candies.length; i++) {
 //   candies.push(
@@ -43,7 +45,14 @@ function Store() {
       </button> */}
     </div>
   ));
-
+  
+  async function submitOrder() {
+    console.log("reached submitOrder");
+    let data = await addOrder(cart);
+    console.log(data);
+    setCart([]);
+    return redirect(`/orders/${data._id}`);
+  }
   return (
     <>
       <h1>DRM Candy Store</h1>
@@ -61,6 +70,7 @@ function Store() {
           Math.round((parseFloat(cart.Price) + parseFloat(total)) * 100) / 100
         ).toFixed(2);
       }, 0)}
+      <button type="button" onClick={submitOrder}> Checkout </button>
     </>
   );
 }
