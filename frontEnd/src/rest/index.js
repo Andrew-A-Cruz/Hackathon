@@ -17,7 +17,7 @@ export function getOrder() {
 export function addOrder(order) {
   let url = "/orders/";
   let myHeaders = new Headers({ "Content-Type": "application/json" });
-  delete order.id;
+  delete order._id;
   let body = JSON.stringify(order);
   var myInit = {
     method: "POST",

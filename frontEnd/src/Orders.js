@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const Orders = () => {
   async function getOrders() {
-    const response = await fetch("localhost:4000/orders/1");
+    const response = await fetch("localhost:4000/orders");
     const orders = await response.json();
     setOrders([...orders]);
   }

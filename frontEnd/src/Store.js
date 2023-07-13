@@ -49,9 +49,9 @@ function Store() {
   async function submitOrder() {
     console.log("reached submitOrder");
     let data = await addOrder(cart);
-    console.log(data);
+    console.log("data:     " + JSON.stringify(data.insertedId));
     setCart([]);
-    return redirect(`/orders/${data._id}`);
+    return redirect(`/orders/${data.insertedId}`);
   }
   return (
     <>
