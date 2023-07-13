@@ -20,7 +20,6 @@ function Store() {
   }, []);
   const renderList = candies.map((candy) => (
     <div>
-      {candy.name + " Price: " + candy.Price}
       <button
         onClick={(e) => {
           setCart([...cart, candy]);
@@ -29,6 +28,8 @@ function Store() {
       >
         Add to Cart
       </button>
+      { " ---> " + candy.name + " --- " + "Price: $" + candy.Price}
+      <p></p>
     </div>
   ));
   const renderCart = cart.map((candy) => (
@@ -47,29 +48,30 @@ function Store() {
   ));
   
   async function submitOrder() {
-    console.log("reached submitOrder");
     let data = await addOrder(cart);
-    console.log("data:     " + JSON.stringify(data.insertedId));
     setCart([]);
-    return redirect(`/orders/${data.insertedId}`);
+    window.location.assign(`/orders/${data.insertedId}`);
   }
   return (
     <>
       <h1>DRM Candy Store</h1>
       <div>
-        <div>Candies:</div>
+        <h1>Candies:</h1>
         <p></p>
         {renderList}
       </div>
-      <div>Cart</div>
+      <br></br>
+      <hr></hr>
+      <h1>Cart</h1>
 
       {renderCart}
 
-      {cart.reduce((total, cart) => {
+      <h2>{"Total: " + cart.reduce((total, cart) => {
         return parseFloat(
           Math.round((parseFloat(cart.Price) + parseFloat(total)) * 100) / 100
         ).toFixed(2);
-      }, 0)}
+      }, 0)}</h2>
+      <br></br>
       <button type="button" onClick={submitOrder}> Checkout </button>
     </>
   );
