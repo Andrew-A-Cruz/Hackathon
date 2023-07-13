@@ -26,12 +26,13 @@ app.get("/orders/:id", (req, res) => {
 
 // add a single book
 app.post("/orders", (req, res) => {
+    console.log(req.body);
     dao.addOrder( req.body,
-        (ok) => {
-            if (!ok) {
+        (order) => {
+            if (!order) {
                 res.status(500).end();
             } else {
-                res.end();
+                res.send(order);
             }
         }
     )

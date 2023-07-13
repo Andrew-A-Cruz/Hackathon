@@ -21,13 +21,14 @@ module.exports.findAllOrders = function (callback) {
 
 // retrieve 1 order
 module.exports.findOrder = function (id, callback) {
-    let dataPromise = orders.findOne({"order_id":parseInt(id)});
+    let dataPromise = orders.findOne({"_id":new mongodb.ObjectId(id)});
     dataPromise.then((order) => callback(order));
 };
 
 // add order
 module.exports.addOrder = function ( order, callback) {
 	delete order._id;
-    let dataPromise = orders.insertOne( order );
-    dataPromise.then((ok) => callback(ok));
+    let newOrder = {items : order}
+    let dataPromise = orders.insertOne( newOrder );
+    dataPromise.then((order) => callback(order));
 };
