@@ -1,116 +1,114 @@
-{
-  "candies": [
-    {
-      "name": "Skittles",
-      "Price": 7.29,
-      "Size": 27.5,
-      "Flavor": "Fruity",
-      "Candy ID": 1
-    },
-    {
-      "name": "Starburst",
-      "Price": 3.99,
-      "Size": 15.6,
-      "Flavor": "Fruity",
-      "Candy ID": 2
-    },
-    {
-      "name": "Sour Patch Kids",
-      "Price": 1.29,
-      "Size": 3.5,
-      "Flavor": "Sour",
-      "Candy ID": 3
-    },
-    {
-      "name": "Mike and Ike",
-      "Price": 1.29,
-      "Size": 5.0,
-      "Flavor": "Fruity",
-      "Candy ID": 3
-    },
-    {
-      "name": "Swedish Fish",
-      "Price": 1.29,
-      "Size": 3.1,
-      "Flavor": "Fruity",
-      "Candy ID": 4
-    },
-    {
-      "name": "Hershey's Milk Chocolate Bar (6)",
-      "Price": 6.39,
-      "Size": 9.1,
-      "Flavor": "Chocolate",
-      "Candy ID": 5
-    },
-    {
-      "name": "Reese's Milk Chocolate Peanut Butter Cups",
-      "Price": 4.79,
-      "Size": 10.5,
-      "Flavor": "Chocolate",
-      "Candy ID": 6
-    },
-    {
-      "name": "Peanut M&M's",
-      "Price": 4.59,
-      "Size": 10.05,
-      "Flavor": "Chocolate",
-      "Candy ID": 7
-    },
-    {
-      "name": "Snickers Fun Size",
-      "Price": 4.99,
-      "Size": 10.59,
-      "Flavor": "Chocolate",
-      "Candy ID": 8
-    },
-    {
-      "name": "Kit Kat",
-      "Price": 4.79,
-      "Size": 10.78,
-      "Flavor": "Chocolate",
-      "Candy ID": 9
-    },
-    {
-      "name": "Twizzlers",
-      "Price": 3.79,
-      "Size": 16.0,
-      "Flavor": "Fruity",
-      "Candy ID": 10
-    },
-    {
-      "name": "York Peppermint Patty",
-      "Price": 7.69,
-      "Size": 17.03,
-      "Flavor": "Mint",
-      "Candy ID": 11
-    },
-    {
-      "name": "Lemonhead",
-      "Price": 24.99,
-      "Size": 40.05,
-      "Flavor": "Sour",
-      "Candy ID": 12
-    },
-    {
-      "name": "Junior Mints",
-      "Price": 1.29,
-      "Size": 3.5,
-      "Flavor": "Mint",
-      "Candy ID": 13
-    },
-    {
-      "name": "LifeSavers Mint",
-      "Price": 2.79,
-      "Size": 6.25,
-      "Flavor": "Mint",
-      "Candy ID": 14
-    },
-    {
-      "name": "Airheads Xtremes",
-      "Price": 7.99,
-      "Size": 30.4,
-      "Flavor": "Sour",
-      "Candy ID": 15
-    }
-  ]
-}
+[
+  {
+    "name": "Skittles",
+    "Price": 7.29,
+    "Size": 27.5,
+    "Flavor": "Fruity",
+    "Candy ID": 1
+  },
+  {
+    "name": "Starburst",
+    "Price": 3.99,
+    "Size": 15.6,
+    "Flavor": "Fruity",
+    "Candy ID": 2
+  },
+  {
+    "name": "Sour Patch Kids",
+    "Price": 1.29,
+    "Size": 3.5,
+    "Flavor": "Sour",
+    "Candy ID": 3
+  },
+  {
+    "name": "Mike and Ike",
+    "Price": 1.29,
+    "Size": 5.0,
+    "Flavor": "Fruity",
+    "Candy ID": 3
+  },
+  {
+    "name": "Swedish Fish",
+    "Price": 1.29,
+    "Size": 3.1,
+    "Flavor": "Fruity",
+    "Candy ID": 4
+  },
+  {
+    "name": "Hershey's Milk Chocolate Bar (6)",
+    "Price": 6.39,
+    "Size": 9.1,
+    "Flavor": "Chocolate",
+    "Candy ID": 5
+  },
+  {
+    "name": "Reese's Milk Chocolate Peanut Butter Cups",
+    "Price": 4.79,
+    "Size": 10.5,
+    "Flavor": "Chocolate",
+    "Candy ID": 6
+  },
+  {
+    "name": "Peanut M&M's",
+    "Price": 4.59,
+    "Size": 10.05,
+    "Flavor": "Chocolate",
+    "Candy ID": 7
+  },
+  {
+    "name": "Snickers Fun Size",
+    "Price": 4.99,
+    "Size": 10.59,
+    "Flavor": "Chocolate",
+    "Candy ID": 8
+  },
+  {
+    "name": "Kit Kat",
+    "Price": 4.79,
+    "Size": 10.78,
+    "Flavor": "Chocolate",
+    "Candy ID": 9
+  },
+  {
+    "name": "Twizzlers",
+    "Price": 3.79,
+    "Size": 16.0,
+    "Flavor": "Fruity",
+    "Candy ID": 10
+  },
+  {
+    "name": "York Peppermint Patty",
+    "Price": 7.69,
+    "Size": 17.03,
+    "Flavor": "Mint",
+    "Candy ID": 11
+  },
+  {
+    "name": "Lemonhead",
+    "Price": 24.99,
+    "Size": 40.05,
+    "Flavor": "Sour",
+    "Candy ID": 12
+  },
+  {
+    "name": "Junior Mints",
+    "Price": 1.29,
+    "Size": 3.5,
+    "Flavor": "Mint",
+    "Candy ID": 13
+  },
+  {
+    "name": "LifeSavers Mint",
+    "Price": 2.79,
+    "Size": 6.25,
+    "Flavor": "Mint",
+    "Candy ID": 14
+  },
+  {
+    "name": "Airheads Xtremes",
+    "Price": 7.99,
+    "Size": 30.4,
+    "Flavor": "Sour",
+    "Candy ID": 15
+  }
+]
