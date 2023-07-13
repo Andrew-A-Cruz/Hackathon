@@ -23,3 +23,16 @@ app.get("/orders/:id", (req, res) => {
             }
         })
 });
+
+// add a single book
+app.post("/orders", (req, res) => {
+    dao.addOrder( req.body,
+        (ok) => {
+            if (!ok) {
+                res.status(500).end();
+            } else {
+                res.end();
+            }
+        }
+    )
+});

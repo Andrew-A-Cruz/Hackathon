@@ -24,3 +24,10 @@ module.exports.findOrder = function (id, callback) {
     let dataPromise = orders.findOne({"order_id":parseInt(id)});
     dataPromise.then((order) => callback(order));
 };
+
+// add order
+module.exports.addOrder = function ( order, callback) {
+	delete order._id;
+    let dataPromise = orders.insertOne( order );
+    dataPromise.then((ok) => callback(ok));
+};
