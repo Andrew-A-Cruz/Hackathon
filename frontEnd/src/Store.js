@@ -1,15 +1,13 @@
 import inventory from "./candy.json";
 import { useState, useEffect } from "react";
-import { getOrder, getOrders, addOrder } from "./rest";
-//import { redirect } from "react-router-dom";
+import { addOrder } from "./rest";
 
 function Store() {
   const [cart, setCart] = useState([]);
   const [candies, setCandies] = useState([]);
   const [filteredCandies, setFilteredCandies] = useState([]);
-  const [categoryCandies, setCategoryCandies] = useState([]);
+  
 
-  // let audio = new Audio("./kaching.mp3");
   useEffect(() => {
     setCandies([...inventory]);
   }, []);
@@ -23,7 +21,6 @@ function Store() {
     let newE = e.target.value;
     if (newE.includes("\\")) {
       newE = newE.replace("\\", "/");
-      console.log("newE " + newE);
     }
     setSearchInput(newE);
   };
@@ -77,7 +74,6 @@ function Store() {
       <button
         onClick={(e) => {
           setCart([...cart, candy]);
-          // audio.play();
         }}
         type="button"
       >
@@ -103,8 +99,6 @@ function Store() {
   }
   return (
     <>
-      <div className="hero-image">
-        <div className="hero-text">
           <h1 className="store-name">DRM Candy Store</h1>
           <div className="drm">Democratic Republic of Mongo: Victor Chen, Calvin Chadima, Andrew Cruz</div>
           <div className="candy-div"> <img src={require('./candy.png')} className="candy-pic"></img></div>
@@ -149,7 +143,6 @@ function Store() {
             <p></p>
             <p></p>
             {renderList}
-          </div>
           <br></br>
           <hr></hr>
           <h1 className="store-h1">Cart</h1>
@@ -171,7 +164,6 @@ function Store() {
             {" "}
             Checkout{" "}
           </button>
-        </div>
     </>
   );
 }

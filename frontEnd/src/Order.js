@@ -6,13 +6,11 @@ const Order = (props) => {
   async function getOrder() {
     const response = await fetch(`/orders/${id}`);
     const order = await response.json();
-    console.log(order);
     setOrder([order]);
   }
   
   useEffect(() => getOrder(), []);
   const [order, setOrder] = useState([]);
-  //console.log(order);
   const renderOrder = order.map((o) => (
     <>
     <div>
