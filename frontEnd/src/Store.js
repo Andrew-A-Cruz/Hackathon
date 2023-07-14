@@ -29,6 +29,12 @@ function Store() {
     setSearchInput(newE);
   };
 
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(!open);
+  };
+
   if (searchInput.length > 0) {
     candies.filter((c) => {
       return c.name.match(searchInput);
@@ -73,6 +79,30 @@ function Store() {
               onChange={search}
               value={searchInput}
             />
+            <p></p>
+            <div>
+              <button onClick={handleOpen}>See Categories</button>
+              {open ? (
+                  <ul className="menu">
+                    <li className="menu-item">
+                      <button>Fruity</button>
+                    </li>
+                    <p></p>
+                    <li className="menu-item">
+                      <button>Sour</button>
+                    </li>
+                    <p></p>
+                    <li className="menu-item">
+                      <button>Chocolate</button>
+                    </li>
+                    <p></p>
+                    <li className="menu-item">
+                      <button>Mint</button>
+                    </li>
+                  </ul>
+                ) : null}
+            </div>
+            <p></p>
             <p></p>
             {renderList}
           </div>
