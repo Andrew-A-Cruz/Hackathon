@@ -4,18 +4,43 @@
 
 body {
   padding: 30px;
-  font-family:'Handlee', cursive;
+  font-family: 'Comic Sans MS';
+  background-color: 	#fdd6ff;
+  color: #6e9cd0;
+  font-weight: bolder;
 }
 
 .store-name {
   font-family: 'Press Start 2P', cursive;
   display:flex;
-
   justify-content: center;
   text-align: center;
+  color: 	#49cad4;
 }
 
 .store-h1 {
   font-family: 'Pacifico', cursive;
+  color:	#49cad4;
 }
 
+button {
+  font-family: 'Comic Sans MS';
+}
+
+.candy-div {
+  display:flex;
+  justify-content: center;
+  height: 100px;
+  width: auto;
+}
+
+.square-div {
+  display: flex;
+  height: 75px;
+  width: auto;
+}
+
+.drm {
+  display: flex;
+  justify-content: center;
+}

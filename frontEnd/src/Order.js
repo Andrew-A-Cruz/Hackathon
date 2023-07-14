@@ -27,6 +27,46 @@ const Order = (props) => {
           Math.round((parseFloat(cart.Price) + parseFloat(total)) * 100) / 100
         ).toFixed(2);
       }, 0)}</h2>
+      <hr></hr>
+      <h3>Payment</h3>
+      <input
+        type="text"
+        placeholder="Name"
+      />
+      <input
+        type="text"
+        placeholder="Card Number"
+      />
+      <input
+        type="text"
+        placeholder="CVV"
+      />
+      <input
+        type="text"
+        placeholder="Date (MM/YYYY)"
+      />
+      <h3>Shipping</h3>
+      <input
+        type="text"
+        placeholder="Street Address"
+      />
+      <input
+        type="text"
+        placeholder="City/Town"
+      />
+      <input
+        type="text"
+        placeholder="Country"
+      />
+      <input
+        type="text"
+        placeholder="Zip Code"
+      />
+      <p> </p>
+      <div className="square-div"> <img src={require('./square-decal.jpg')}></img> </div>
+      
+      <p> </p>
+      <button type="button" onClick = {() => window.location.assign('/')}> Submit </button>
     </>
     
     
@@ -36,12 +76,15 @@ const Order = (props) => {
       }
   return (
     <>
-      <h1>Thank You For Shopping with Us!</h1>
+      <h1 className="store-name">DRM Candy Store</h1>
+      <div className="drm">Democratic Republic of Mongo: Victor Chen, Calvin Chadima, Andrew Cruz</div>
+      <div className="candy-div"> <img src={require('./candy.png')} className="candy-pic"></img></div>
+      <h1 className="store-h1">Thank You For Shopping with Us!</h1>
       <h2>Here is your order: </h2>
       <div>{renderOrder}</div>
       <br></br>
       <p> Still Hungry? </p>
-      <button type="button" onClick={backHome}> Buy more Candy </button>
+      <button type="button" onClick={backHome}> Back to Store </button>
     </>
   );
 };

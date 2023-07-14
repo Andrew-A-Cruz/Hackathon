@@ -13,12 +13,7 @@ function Store() {
   useEffect(() => {
     setCandies([...inventory]);
   }, []);
-  useEffect(() => {
-    let newFilterCandies = candies.filter((candy) =>
-      candy.name.toLowerCase().includes(searchInput)
-    );
-    setFilteredCandies(newFilterCandies);
-  });
+  
 
   const [searchInput, setSearchInput] = useState("");
   const [categoryInput, setCategoryInput] = useState("");
@@ -37,11 +32,18 @@ function Store() {
   };
 
   useEffect(() => {
+    let newFilterCandies = candies.filter((candy) =>
+      candy.name.toLowerCase().includes(searchInput)
+    );
+    setFilteredCandies(newFilterCandies);
+  }, [searchInput, candies]);
+
+  useEffect(() => {
     let newCategoryCandies = candies.filter((candy) =>
       candy.Flavor.includes(categoryInput)
     );
     setFilteredCandies(newCategoryCandies);
-  });
+  }, [categoryInput, candies]);
 
   const [open, setOpen] = useState(false);
 
@@ -60,6 +62,18 @@ function Store() {
 
   const renderList = filteredCandies.map((candy) => (
     <div>
+      <div onClick={() => showDetails(candy["Candy ID"])}>
+        {candy.name + " --- " + "Price: $" + candy.Price}
+      </div>
+      <p></p>
+      {currCandy === candy["Candy ID"] ? (
+        <ul>
+          <li>{candy.Flavor}</li>
+          <li>{candy.Size + " oz"}</li>
+        </ul>
+      ) : (
+        ""
+      )}
       <button
         onClick={(e) => {
           setCart([...cart, candy]);
@@ -69,17 +83,6 @@ function Store() {
       >
         Add to Cart
       </button>
-      <div onClick={() => showDetails(candy["Candy ID"])}>
-        {" ---> " + candy.name + " --- " + "Price: $" + candy.Price}
-      </div>
-      {currCandy === candy["Candy ID"] ? (
-        <ul>
-          <li>{candy.Flavor}</li>
-          <li>{candy.Size + " oz"}</li>
-        </ul>
-      ) : (
-        ""
-      )}
       <p></p>
     </div>
   ));
@@ -91,20 +94,28 @@ function Store() {
   async function submitOrder() {
     let data = await addOrder(cart);
     setCart([]);
-    window.location.assign(`/orders/${data.insertedId}`);
+    if (cart.length !== 0) {
+      window.location.assign(`/orders/${data.insertedId}`);
+    }
+    else {
+      window.location.reload();
+    }
   }
   return (
     <>
-      <div clasName="hero-image">
+      <div className="hero-image">
         <div className="hero-text">
           <h1 className="store-name">DRM Candy Store</h1>
-          <div>
+          <div className="drm">Democratic Republic of Mongo: Victor Chen, Calvin Chadima, Andrew Cruz</div>
+          <div className="candy-div"> <img src={require('./candy.png')} className="candy-pic"></img></div>
+          
             <h1 className="store-h1">Candies:</h1>
             <input
               type="text"
               placeholder="Search here"
               onChange={search}
               value={searchInput}
+              className="search"
             />
             <p></p>
             <div>
@@ -127,6 +138,10 @@ function Store() {
                   <p></p>
                   <li className="menu-item">
                     <button onClick={() => category("Mint")}>Mint</button>
+                  </li>
+                  <p></p>
+                  <li className="menu-item">
+                    <button onClick={() => category("")}>All Candies</button>
                   </li>
                 </ul>
               ) : null}
@@ -157,7 +172,6 @@ function Store() {
             Checkout{" "}
           </button>
         </div>
-      </div>
     </>
   );
 }
