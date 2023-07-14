@@ -7,6 +7,8 @@ function Store() {
   const [cart, setCart] = useState([]);
   const [candies, setCandies] = useState([]);
   const [filteredCandies, setFilteredCandies] = useState([]);
+  const [categoryCandies, setCategoryCandies] = useState([]);
+
   // let audio = new Audio("./kaching.mp3");
   useEffect(() => {
     setCandies([...inventory]);
@@ -19,6 +21,8 @@ function Store() {
   });
 
   const [searchInput, setSearchInput] = useState("");
+  const [categoryInput, setCategoryInput] = useState("");
+  const [currCandy, setCurrCandy] = useState("");
   const search = (e) => {
     e.preventDefault();
     let newE = e.target.value;
@@ -28,6 +32,16 @@ function Store() {
     }
     setSearchInput(newE);
   };
+  const category = (c) => {
+    setCategoryInput(c);
+  };
+
+  useEffect(() => {
+    let newCategoryCandies = candies.filter((candy) =>
+      candy.Flavor.includes(categoryInput)
+    );
+    setFilteredCandies(newCategoryCandies);
+  });
 
   const [open, setOpen] = useState(false);
 
@@ -39,6 +53,9 @@ function Store() {
     candies.filter((c) => {
       return c.name.match(searchInput);
     });
+  }
+  function showDetails(cID) {
+    setCurrCandy(cID);
   }
 
   const renderList = filteredCandies.map((candy) => (
@@ -52,7 +69,17 @@ function Store() {
       >
         Add to Cart
       </button>
-      {" ---> " + candy.name + " --- " + "Price: $" + candy.Price}
+      <div onClick={() => showDetails(candy["Candy ID"])}>
+        {" ---> " + candy.name + " --- " + "Price: $" + candy.Price}
+      </div>
+      {currCandy === candy["Candy ID"] ? (
+        <ul>
+          <li>{candy.Flavor}</li>
+          <li>{candy.Size + " oz"}</li>
+        </ul>
+      ) : (
+        ""
+      )}
       <p></p>
     </div>
   ));
@@ -83,24 +110,26 @@ function Store() {
             <div>
               <button onClick={handleOpen}>See Categories</button>
               {open ? (
-                  <ul className="menu">
-                    <li className="menu-item">
-                      <button>Fruity</button>
-                    </li>
-                    <p></p>
-                    <li className="menu-item">
-                      <button>Sour</button>
-                    </li>
-                    <p></p>
-                    <li className="menu-item">
-                      <button>Chocolate</button>
-                    </li>
-                    <p></p>
-                    <li className="menu-item">
-                      <button>Mint</button>
-                    </li>
-                  </ul>
-                ) : null}
+                <ul className="menu">
+                  <li className="menu-item">
+                    <button onClick={() => category("Fruity")}>Fruity</button>
+                  </li>
+                  <p></p>
+                  <li className="menu-item">
+                    <button onClick={() => category("Sour")}>Sour</button>
+                  </li>
+                  <p></p>
+                  <li className="menu-item">
+                    <button onClick={() => category("Chocolate")}>
+                      Chocolate
+                    </button>
+                  </li>
+                  <p></p>
+                  <li className="menu-item">
+                    <button onClick={() => category("Mint")}>Mint</button>
+                  </li>
+                </ul>
+              ) : null}
             </div>
             <p></p>
             <p></p>
