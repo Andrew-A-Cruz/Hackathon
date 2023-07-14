@@ -15,14 +15,30 @@ function Store() {
   const [cart, setCart] = useState([]);
   //const [remove, removeFromCart] = useState([])
   const [candies, setCandies] = useState([]);
+  // let audio = new Audio("./kaching.mp3");
   useEffect(() => {
     setCandies([...inventory]);
   }, []);
+
+  const searchBar = () => {}
+  const [searchInput, setSearchInput] = useState("");
+  const search = (e) => {
+    e.preventDefault();
+    setSearchInput(e.target.value);
+  };
+  
+  if (searchInput.length > 0) {
+      candies.filter((c) => {
+      return c.name.match(searchInput);
+  });
+  }
+
   const renderList = candies.map((candy) => (
     <div>
       <button
         onClick={(e) => {
           setCart([...cart, candy]);
+          // audio.play();
         }}
         type="button"
       >
@@ -32,6 +48,7 @@ function Store() {
       <p></p>
     </div>
   ));
+
   const renderCart = cart.map((candy) => (
     <div>
       {candy.name + " Price: " + candy.Price}
@@ -54,25 +71,34 @@ function Store() {
   }
   return (
     <>
-      <h1>DRM Candy Store</h1>
+      <div clasName="hero-image">
+        <div className='hero-text'>
+      <h1 className="store-name">DRM Candy Store</h1>
       <div>
-        <h1>Candies:</h1>
+      <h1 className="store-h1">Candies:</h1>
+      <input
+      type="text"
+      placeholder="Search here"
+      onChange={search}
+      value={searchInput} />
         <p></p>
         {renderList}
       </div>
       <br></br>
       <hr></hr>
-      <h1>Cart</h1>
+      <h1 className="store-h1">Cart</h1>
 
       {renderCart}
 
-      <h2>{"Total: " + cart.reduce((total, cart) => {
+      <h2>{"Total: $" + cart.reduce((total, cart) => {
         return parseFloat(
           Math.round((parseFloat(cart.Price) + parseFloat(total)) * 100) / 100
         ).toFixed(2);
       }, 0)}</h2>
       <br></br>
       <button type="button" onClick={submitOrder}> Checkout </button>
+      </div>
+      </div>
     </>
   );
 }

@@ -22,6 +22,11 @@ const Order = (props) => {
     <div>
         { " Items: " + o.items.map((i) => " " + i.name + " $" + i.Price) }
     </div>
+    <h2>{"Total: $" + o.items.reduce((total, cart) => {
+        return parseFloat(
+          Math.round((parseFloat(cart.Price) + parseFloat(total)) * 100) / 100
+        ).toFixed(2);
+      }, 0)}</h2>
     </>
     
     
